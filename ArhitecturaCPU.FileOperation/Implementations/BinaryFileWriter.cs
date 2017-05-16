@@ -4,11 +4,11 @@ using ArhitecturaCPU.FileOperation.Interfaces;
 
 namespace ArhitecturaCPU.FileOperation.Implementations
 {
-    public class BinaryWriterFileWriter : IBinaryWriter
+    public class BinaryFileWriter : IBinaryWriter
     {
         private BinaryWriter _binaryWriter;
 
-        public BinaryWriterFileWriter(string fileName)
+        public BinaryFileWriter(string fileName)
         {
             _binaryWriter = new BinaryWriter(File.Open(fileName, FileMode.Create));
         }
