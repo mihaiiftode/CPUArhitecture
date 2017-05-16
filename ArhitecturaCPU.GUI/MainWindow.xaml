@@ -1,0 +1,327 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArhitecturaCPU.GUI"
+        xmlns:e="http://schemas.microsoft.com/expression/2010/effects" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+    x:Class="ArhitecturaCPU.GUI.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="675.176" Width="1010.216" DataContext="{Binding RelativeSource={RelativeSource Self}}" Icon="Icon.ico">
+    <Grid Margin="0,0,2,-21" Background="White"   >
+
+        <Grid x:Name="DrawingGrid" RenderTransformOrigin="0.45,0.581" Width="966" Height="590" Margin="18,26,16,25">
+            <Canvas HorizontalAlignment="Left" Height="60.5" Margin="30.666,0,0,192.176" VerticalAlignment="Bottom" Width="129">
+                <Rectangle x:Name="PdCond1" Fill="#FFA8A8A8" Height="4.665" Stroke="Black" StrokeThickness="0.1" Width="129" RenderTransformOrigin="0.362,10.982" Canvas.Top="55.835"/>
+                <Rectangle x:Name="PdCond2" Fill="#FFA8A8A8" Height="52.165" Stroke="Black" StrokeThickness="0.1" Width="4.5" Canvas.Top="3.335"/>
+                <ed:BlockArrow x:Name="PdCond3" Fill="#FFA8A8A8" Height="8" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="30"/>
+            </Canvas>
+
+            <Path x:Name="ALU" Data="M15,0 L60,0 75,30 45,30 37.359487,17.726489 30,30 0,30 z" Fill="#FF760909" Height="60" Stretch="Fill" Width="97.666" HorizontalAlignment="Left" Margin="110.943,0,0,123.726" VerticalAlignment="Bottom" RenderTransformOrigin="0.467,0.464">
+                <Path.Effect>
+                    <DropShadowEffect/>
+                </Path.Effect>
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <ed:BlockArrow x:Name="ALU2" Fill="#FFA8A8A8" HorizontalAlignment="Left" Height="10" Margin="20,0,0,154.175" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Bottom" Width="108.999"/>
+
+            <ed:BlockArrow x:Name="MDRActivate" Fill="#FFFBB2B2" HorizontalAlignment="Right" Margin="0,33.96,342.301,0" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6" Height="59.373" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="ADRActivate" Fill="#FFFBB2B2" HorizontalAlignment="Right" Margin="0,33.96,317.301,0" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6" Height="101.04" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="IRActivate" Fill="#FFFBB2B2" HorizontalAlignment="Right" Margin="0,33.96,289.801,0" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6" Height="150.04" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="RGActivate" Fill="#FFFBB2B2" HorizontalAlignment="Right" Margin="0,33.96,257.801,0" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6" Height="211.04" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="OneActivate" Fill="#FFFBB2B2" HorizontalAlignment="Left" Margin="322.333,38.96,0,214.176" Orientation="Down" Stroke="Black" StrokeThickness="0" Width="6"/>
+            <ed:BlockArrow x:Name="MinusOneActivate" Fill="#FFFBB2B2" HorizontalAlignment="Left" Margin="304.582,38.96,0,177.174" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6"/>
+            <ed:BlockArrow x:Name="ZeroActivate" Fill="#FFFBB2B2" HorizontalAlignment="Left" Margin="288.581,38.96,0,129.722" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6"/>
+            <ed:BlockArrow x:Name="SPActivate" Fill="#FFFBB2B2" HorizontalAlignment="Left" Margin="247.667,33.96,0,0" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6" Height="250.04" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="FLAGActivate" Fill="#FFFBB2B2" HorizontalAlignment="Left" Margin="234.249,33.96,0,270.176" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6"/>
+            <ed:BlockArrow x:Name="TActivate" Fill="#FFFBB2B2" HorizontalAlignment="Left" Margin="172.582,33.96,0,0" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6" Height="207.04" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="IVRActivate" Fill="#FFFBB2B2" HorizontalAlignment="Left" Margin="194.914,33.96,0,0" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6" Height="167.04" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="PmFLAGActivate" Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="75,39,0,278" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6"/>
+            <Rectangle x:Name="RBUS1" Fill="#FF9595E8" HorizontalAlignment="Left" Margin="10,61,0,0" Stroke="Black" StrokeThickness="0.1" Width="10"/>
+            <Rectangle x:Name="RBUS2" Fill="#FF9595E8" Height="11.176" Margin="10,0" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Bottom"/>
+            <Rectangle x:Name="RBUS3" Fill="#FF9595E8" HorizontalAlignment="Right" Margin="0,61,10,0" Stroke="Black" StrokeThickness="0.1" Width="10"/>
+            <Rectangle x:Name="DBUS" Fill="#FF9595E8" Margin="0,61,474.216,59.176" Stroke="Black" StrokeThickness="0.1" HorizontalAlignment="Right" Width="7"/>
+            <Rectangle x:Name="SBUS" Fill="#FF9595E8" Margin="434,61,0,59.176" Stroke="Black" StrokeThickness="0.1" HorizontalAlignment="Left" Width="7"/>
+            <Rectangle HorizontalAlignment="Left" Height="85.339" Margin="230,61,0,0" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Width="104" Fill="#FFA8A8A8">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="19" Margin="140,161,0,0" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Width="194" Fill="#FFA8A8A8">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="19" Margin="140,201,0,0" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Width="194" Fill="#FFA8A8A8">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Right" Height="21" Margin="0,241,632,0" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Width="194" Fill="#FFA8A8A8">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="20" Margin="140,0,0,250" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Bottom" Width="194" Fill="#FFA8A8A8">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Margin="140,284,0,286" Stroke="Black" StrokeThickness="0.1" Width="194" Fill="#FFA8A8A8">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="17" Margin="318,0,0,197.176" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Bottom" Width="16" Fill="#FFA8A8A8">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="17" Margin="300.665,0,0,160.174" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Bottom" Width="16" Fill="#FFA8A8A8">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="17" Margin="285.336,0,0,112.722" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Bottom" Width="16" Fill="#FFA8A8A8" RenderTransformOrigin="1.062,4.882">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <ed:BlockArrow x:Name="PmPC" Fill="#FFA8A8A8" HorizontalAlignment="Left" Height="9" Margin="15,165,0,0" Orientation="Right" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Width="125"/>
+            <ed:BlockArrow x:Name="PmT" Fill="#FFA8A8A8" HorizontalAlignment="Left" Height="9" Margin="15,245,0,0" Orientation="Right" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Width="125"/>
+            <ed:BlockArrow x:Name="PmIVR" Fill="#FFA8A8A8" HorizontalAlignment="Left" Height="9" Margin="15,209,0,0" Orientation="Right" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Width="125"/>
+            <ed:BlockArrow x:Name="PmSP" Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="15,290,0,291.176" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="125"/>
+            <Path Data="M15,0 L60,0 75,30 0,30 z" Fill="#FFA8A8A8" Height="30" Stretch="Fill" Width="41.666" HorizontalAlignment="Left" Margin="57.175,0,0,246.654" VerticalAlignment="Bottom" RenderTransformOrigin="0.467,0.464">
+                <Path.Effect>
+                    <DropShadowEffect/>
+                </Path.Effect>
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <ed:BlockArrow x:Name="PmFLAG" Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="15,0,0,267.846" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="45.668" Height="9" VerticalAlignment="Bottom" RenderTransformOrigin="0.495,-0.593"/>
+            <ed:BlockArrow Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="91.333,0,0,256.511" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="48.667" Height="9" VerticalAlignment="Bottom" RenderTransformOrigin="0.495,-0.593"/>
+
+            <ed:BlockArrow x:Name="Pd0s" Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="301.332,0,0,123.722" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="132.668" Height="6" VerticalAlignment="Bottom" RenderTransformOrigin="0.495,-0.593"/>
+            <ed:BlockArrow x:Name="PdMinus1" Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="316.665,0,0,163.509" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="117.335" Height="6" VerticalAlignment="Bottom" RenderTransformOrigin="0.495,-0.593"/>
+            <ed:BlockArrow x:Name="Pd1" Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="334,0,0,201.841" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="100" Height="6" VerticalAlignment="Bottom" RenderTransformOrigin="0.495,-0.593"/>
+            <Rectangle HorizontalAlignment="Right" Height="18" Margin="0,93,143,0" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Width="227" Fill="#FFA8A8A8">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Right" Height="17" Margin="0,184,143.216,0" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Width="227" Fill="#FFA8A8A8">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Right" Height="19" Margin="0,137,143,0" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Width="227" Fill="#FFA8A8A8">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Path Data="M15,0 L60,0 75,30 0,30 z" Fill="#FFA8A8A8" Height="30" Stretch="Fill" Width="41.666" HorizontalAlignment="Right" Margin="0,86.522,85.375,0" VerticalAlignment="Top" RenderTransformOrigin="0.467,0.464">
+                <Path.Effect>
+                    <DropShadowEffect Direction="135"/>
+                </Path.Effect>
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Rectangle Height="286" Margin="0,245,136.722,0" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Fill="#FFA8A8A8" HorizontalAlignment="Right" Width="233.494">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <TextBox x:Name="textBox"   HorizontalAlignment="Right" Height="18" Margin="0,245,185.216,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[0]}" VerticalAlignment="Top" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy" HorizontalAlignment="Right" Height="18" Margin="0,263,185.216,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[1]}" VerticalAlignment="Top" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Right" Height="18" Margin="0,0,185,291" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[2]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Right" Height="18" Margin="0,0,186,274" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[3]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy3" HorizontalAlignment="Right" Margin="0,317,185,254" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[4]}" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy4" HorizontalAlignment="Right" Height="18" Margin="0,0,185.216,237.389" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[5]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy5" HorizontalAlignment="Right" Height="18" Margin="0,0,185.216,219.612" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[6]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy6" HorizontalAlignment="Right" Height="18" Margin="0,0,185.216,202.341" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[7]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy7" HorizontalAlignment="Right" Height="18" Margin="0,0,185.216,184.889" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[8]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy8" HorizontalAlignment="Right" Height="18" Margin="0,0,185.216,167.389" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[9]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy9" HorizontalAlignment="Right" Height="18" Margin="0,0,185.216,149.389" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[10]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy10" HorizontalAlignment="Right" Height="18" Margin="0,0,185.216,131.389" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[11]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy11" HorizontalAlignment="Right" Height="18" Margin="0,0,185.216,113.389" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[12]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy12" HorizontalAlignment="Right" Height="18" Margin="0,0,185.216,95.389" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[13]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy13" HorizontalAlignment="Right" Height="18" Margin="0,0,185.216,77.389" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[14]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy14" HorizontalAlignment="Right" Height="18" Margin="0,0,185.216,58.676" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Path=Controller.GeneralRegisters[15]}" VerticalAlignment="Bottom" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBlock x:Name="R0" Text="R0" HorizontalAlignment="Right" Margin="0,246.24,143.216,0"  VerticalAlignment="Top" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R1" Text="R1" HorizontalAlignment="Right" Margin="0,263.5,143.216,0"  VerticalAlignment="Top" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R2" Text="R2" HorizontalAlignment="Right" Margin="0,281,143.216,291.176"  Width="37" Height="16" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R3" Text="R3" HorizontalAlignment="Right" Margin="0,0,143.216,274.176"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R4" Text="R4" HorizontalAlignment="Right" Margin="0,0,143.216,256.511"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R5" Text="R5" HorizontalAlignment="Right" Margin="0,0,143.216,238.889"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R6" Text="R6" HorizontalAlignment="Right" Margin="0,0,143.216,221.349"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R7" Text="R7" HorizontalAlignment="Right" Margin="0,0,143.216,203.349"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R8" Text="R10" HorizontalAlignment="Right" Margin="0,0,143.216,149.889"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R9" Text="R9" HorizontalAlignment="Right" Margin="0,0,143.216,167.889"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R10" Text="R8" HorizontalAlignment="Right" Margin="0,0,143.216,185.349"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R11" Text="R11" HorizontalAlignment="Right" Margin="0,0,143.216,131.849"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R12" Text="R12" HorizontalAlignment="Right" Margin="0,0,143.216,113.849"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R13" Text="R13" HorizontalAlignment="Right" Margin="0,0,143.216,96.809"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="E14" Text="R14" HorizontalAlignment="Right" Margin="0,0,143.216,78.809"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="R15" Text="R15" HorizontalAlignment="Right" Margin="0,0,143.216,60.809"  VerticalAlignment="Bottom" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <ed:BlockArrow x:Name="PCAtivate" Fill="#FFFBB2B2" HorizontalAlignment="Left" Margin="216.582,33.96,0,0" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6" Height="127.54" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="PdTs" Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="334,243.329,0,0" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="100" Height="6" VerticalAlignment="Top" RenderTransformOrigin="0.495,-0.593"/>
+            <ed:BlockArrow x:Name="PdSPs" Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="333.333,285.662,0,0" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="100" RenderTransformOrigin="0.495,-0.593" Height="6" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="PdFLAGs" Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="334,0,0,263.176" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="100" Height="6" VerticalAlignment="Bottom" RenderTransformOrigin="0.495,-0.593"/>
+            <ed:BlockArrow x:Name="PdIVRs" Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="334,201.328,0,0" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="100" Height="6" VerticalAlignment="Top" RenderTransformOrigin="0.495,-0.593"/>
+            <ed:BlockArrow x:Name="PdPCs" Fill="#FFA8A8A8" HorizontalAlignment="Left" Margin="334,161.995,0,0" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Width="100" Height="6" VerticalAlignment="Top" RenderTransformOrigin="0.495,-0.593"/>
+            <ed:BlockArrow x:Name="PdIVRd" Fill="#FFA8A8A8" Margin="334,211.005,481.216,0" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Height="6" VerticalAlignment="Top" RenderTransformOrigin="0.495,-0.593"/>
+            <ed:BlockArrow x:Name="PdPCd" Fill="#FFA8A8A8" Margin="334,172.339,481.216,0" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Height="6" VerticalAlignment="Top" RenderTransformOrigin="0.495,-0.593"/>
+            <ed:BlockArrow x:Name="PdTd" Fill="#FFA8A8A8" Margin="334,252.339,481.216,0" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Height="6" VerticalAlignment="Top" RenderTransformOrigin="0.495,-0.593"/>
+            <ed:BlockArrow x:Name="PdSPd" Fill="#FFA8A8A8" Margin="334,0,481.216,286.169" Orientation="Right" Stroke="Black" StrokeThickness="0.1" RenderTransformOrigin="0.495,-0.593" Height="6" VerticalAlignment="Bottom"/>
+            <ed:BlockArrow x:Name="PdFLAGd" Fill="#FFA8A8A8" Margin="334,0,481.216,252.676" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Height="6" VerticalAlignment="Bottom" RenderTransformOrigin="0.495,-0.593"/>
+            <ed:BlockArrow x:Name="PdRGs" Fill="#FFA8A8A8" Height="6.667" Margin="441,0,369.216,163.509" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Bottom" RenderTransformOrigin="0.383,0.36"/>
+            <ed:BlockArrow x:Name="Pd0d" Fill="#FFA8A8A8" Margin="300.665,0,481.883,112.262" Orientation="Right" Stroke="Black" StrokeThickness="0.1" Height="6.46" VerticalAlignment="Bottom" RenderTransformOrigin="0.495,-0.593"/>
+
+            <ed:BlockArrow x:Name="ALU3" Fill="#FF6E3E3E" Height="6.667" Margin="189.667,0,476.883,136.056" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Bottom" RenderTransformOrigin="0.383,0.36"/>
+            <ed:BlockArrow x:Name="ALU4" Fill="#FF6E3E3E" Height="7.287" Margin="189.667,0,0,184.889" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Bottom" RenderTransformOrigin="0.383,0.36" HorizontalAlignment="Left" Width="251.333"/>
+            <ed:BlockArrow x:Name="ALUActivate" Fill="#FFFBB2B2" HorizontalAlignment="Left" Margin="153.666,33.96,0,197.176" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6"/>
+
+            <ed:BlockArrow x:Name="PdRGd" Fill="#FFA8A8A8" Height="6.837" Margin="0,0,370.216,175.552" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Bottom" RenderTransformOrigin="0.383,0.36" HorizontalAlignment="Right" Width="104"/>
+            <ed:BlockArrow x:Name="PdMDRd" Fill="#FFA8A8A8" HorizontalAlignment="Right" Height="6" Margin="0,93.333,370.216,0" Orientation="Left" VerticalAlignment="Top" Width="104"/>
+            <ed:BlockArrow x:Name="PdADRs" Fill="#FFA8A8A8" Height="6" Margin="441,147.667,369.216,0" Orientation="Left" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="PdIRs" Fill="#FFA8A8A8" Height="6" Margin="441,195,369.216,0" Orientation="Left" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="PdADRd" Fill="#FFA8A8A8" HorizontalAlignment="Right" Height="6" Margin="0,136.667,370.216,0" Orientation="Left" VerticalAlignment="Top" Width="104"/>
+            <ed:BlockArrow x:Name="PdIRd" Fill="#FFA8A8A8" HorizontalAlignment="Right" Height="6" Margin="0,184,370.216,0" Orientation="Left" VerticalAlignment="Top" Width="104"/>
+            <ed:BlockArrow x:Name="PdMDRs" Fill="#FFA8A8A8" Height="6" Margin="440,104.333,370.216,0" Orientation="Left" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="PmRG" Fill="#FFA8A8A8" Height="7.504" Margin="0,0,20,229.845" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Bottom" RenderTransformOrigin="0.383,0.36" HorizontalAlignment="Right" Width="118.216"/>
+            <ed:BlockArrow x:Name="PmMDRActivate" Fill="#FFFBB2B2" HorizontalAlignment="Right" Margin="0,33.96,101.634,0" Orientation="Down" Stroke="Black" StrokeThickness="0.1" Width="6" Height="49.04" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="PmADR" Fill="#FFA8A8A8" Height="6.837" Margin="0,142.67,20,0" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" RenderTransformOrigin="0.383,0.36" HorizontalAlignment="Right" Width="123.216"/>
+            <ed:BlockArrow x:Name="PmMDR1" Fill="#FFA8A8A8" Height="6.837" Margin="0,110.161,20,0" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" RenderTransformOrigin="0.383,0.36" HorizontalAlignment="Right" Width="71.216"/>
+            <ed:BlockArrow x:Name="DataIN" Fill="#FFA8A8A8" Height="5" Margin="334,98.666,369.216,0" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="ADR" Fill="#FFA8A8A8" Height="5" Margin="334,142.333,369.216,0" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top"/>
+            <ed:BlockArrow x:Name="PmIR" Fill="#FFA8A8A8" Height="6" Margin="0,187.493,54.667,0" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" RenderTransformOrigin="0.383,0.36" HorizontalAlignment="Right" Width="88.549"/>
+            <Rectangle x:Name="DataOUT1" Fill="#FFA8A8A8" Height="4" Margin="334,61,54.667,0" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top"/>
+            <Rectangle x:Name="DataOUT2" Fill="#FFA8A8A8" HorizontalAlignment="Right" Height="132.493" Margin="0,61,51.667,0" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" Width="4"/>
+            <ed:BlockArrow x:Name="PmMDR2" Fill="#FFA8A8A8" Height="6.837" Margin="0,82.828,51.667,0" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" RenderTransformOrigin="0.383,0.36" HorizontalAlignment="Right" Width="39.549"/>
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="29.338,152.374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" Width="34.625" FontSize="9"><Run Text="PmPC"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="29.338,199.287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" Width="34.625" FontSize="9"><Run Text="PmIVR"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="29.338,235.287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" Width="34.625" FontSize="9"><Run Text="PmT"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="29.338,280.287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" Width="34.625" FontSize="9"><Run Text="PmSP"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="21.665,0,0,257.315" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="12.626" Width="34.625" FontSize="9"><Run Text="PmFLAG"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="56.998,0,0,195.215" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="12.626" Width="34.625" FontSize="9"><Run Text="PdCond"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy5" HorizontalAlignment="Left" Margin="441,48.374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" Width="41.958" FontSize="9"><Run Text="Data OUT"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy6" HorizontalAlignment="Left" Margin="348.333,86.707,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" Width="41.958" FontSize="9"><Run Text="Data IN"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy7" HorizontalAlignment="Left" Margin="348.333,129.707,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" Width="41.958" FontSize="9" Text="ADR"/>
+            <TextBlock x:Name="textBlock1_Copy8" HorizontalAlignment="Left" Margin="348.333,152.374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" Width="41.958" FontSize="9"><Run Text="PdPCs"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy9" Margin="443.042,162.626,481.216,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9"><Run Text="PdPCd"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy10" Margin="348.333,189.574,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" HorizontalAlignment="Left" Width="41.958"><Run Text="PdIVRs"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy11" Margin="348.333,232.374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" HorizontalAlignment="Left" Width="41.958"><Run Text="PdTs"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy12" Margin="348.333,275.949,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" HorizontalAlignment="Left" Width="41.958"><Run Text="PdSPs"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy13" Margin="348.333,0,0,267.028" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="12.626" FontSize="9" HorizontalAlignment="Left" Width="41.958"><Run Text="PdFLAGs"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy14" Margin="348.333,0,0,204.928" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="12.626" FontSize="9" HorizontalAlignment="Left" Width="41.958"><Run Text="Pd1"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy15" Margin="348.333,0,0,169.763" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="12.626" FontSize="9" HorizontalAlignment="Left" Width="41.958"><Run Text="Pd-1"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy16" Margin="334,0,0,126.809" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="12.626" FontSize="9" HorizontalAlignment="Left" Width="41.958" Text="Pd0s"/>
+            <TextBlock x:Name="textBlock1_Copy17" Margin="442.375,0,481.883,115.809" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="12.626" FontSize="9"><Run Text="Pd0d"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy18" Margin="443.042,0,481.216,169.763" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="12.626" FontSize="9"><Run Text="PdRGs"/><LineBreak/><Run Text="d"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy19" Margin="0,0,405.216,182.476" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="12.626" FontSize="9" HorizontalAlignment="Right" Width="41.958"><Run Text="PdRGd"/><LineBreak/><Run/><LineBreak/><Run Text="d"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy20" Margin="443.042,0,481.216,258.676" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="12.626" FontSize="9"><Run Text="PdFLAGd"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy21" Margin="446,284,478.258,293.55" TextWrapping="Wrap" FontSize="9"><Run Text="PdSPd"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy22" Margin="448.378,241,475.88,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9"><Run Text="PdTd"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy23" Margin="443.042,201,481.216,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" RenderTransformOrigin="2.518,1.644"><Run Text="PdIVRd"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy24" Margin="443.042,184,481.216,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" RenderTransformOrigin="2.518,1.644"><Run Text="PdIRs"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy25" Margin="0,172.339,399.216,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" RenderTransformOrigin="2.518,1.644" HorizontalAlignment="Right" Width="41.958"><Run Text="PdIRd"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy26" Margin="0,124.041,411.216,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" RenderTransformOrigin="2.518,1.644" HorizontalAlignment="Right" Width="41.958"><Run Text="PdADRd"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy27" Margin="0,79.952,405.216,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" RenderTransformOrigin="2.518,1.644" HorizontalAlignment="Right" Width="41.958"><Run Text="PdMDRd"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy28" Margin="443.042,107.285,481.216,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" RenderTransformOrigin="2.518,1.644"><Run Text="PdMDRs"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy29" Margin="443.042,130.041,481.216,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" RenderTransformOrigin="2.518,1.644"><Run Text="PdADRs"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy30" Margin="0,98.666,49.258,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" RenderTransformOrigin="2.518,1.644" HorizontalAlignment="Right" Width="41.958"><Run Text="PmMDR"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy31" Margin="0,177.374,72.591,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" RenderTransformOrigin="2.518,1.644" HorizontalAlignment="Right" Width="41.958"><Run Text="PmIR"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy32" Margin="0,132.62,72.591,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="12.626" FontSize="9" RenderTransformOrigin="2.518,1.644" HorizontalAlignment="Right" Width="41.958"><Run Text="PmADR"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <ed:BlockArrow x:Name="PmMDR3" Fill="#FFA8A8A8" Height="6.837" Margin="0,98.666,121.667,0" Orientation="Left" Stroke="Black" StrokeThickness="0.1" VerticalAlignment="Top" RenderTransformOrigin="0.383,0.36" HorizontalAlignment="Right" Width="21.549"/>
+            <TextBlock x:Name="textBlock1_Copy33" Margin="425,0,499,46" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="13" FontSize="9" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="1.158"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform><Run Text="SBUS"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy34" Margin="477,0,447,46" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="13" FontSize="9"><Run Text="DBUS"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy35" Margin="869,0,55,235" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="13" FontSize="9"><Run Text="P"/><Run Text="mRG"/><LineBreak/><Run Text="d"/><LineBreak/><Run/></TextBlock>
+            <TextBox x:Name="textBox_Copy15"   HorizontalAlignment="Right" Height="18" Margin="0,93,184,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Controller.MDR}" VerticalAlignment="Top" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBlock x:Name="MDRLabel" Text="MDR" HorizontalAlignment="Right" Margin="0,94,143,0"  VerticalAlignment="Top" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBox x:Name="textBox_Copy16"   HorizontalAlignment="Right" Height="18" Margin="0,137,184,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Controller.ADR}" VerticalAlignment="Top" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBlock x:Name="ADRLabel" Text="ADR" HorizontalAlignment="Right" Margin="0,138,143,0"  VerticalAlignment="Top" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBox x:Name="textBox_Copy17"   HorizontalAlignment="Right" Height="18" Margin="0,183,184,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Controller.IR}" VerticalAlignment="Top" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBlock x:Name="IRLabel" Text="IR" HorizontalAlignment="Right" Margin="0,184,143,0"  VerticalAlignment="Top" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBox x:Name="textBox_Copy18"   HorizontalAlignment="Right" Height="19" Margin="0,161,676,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Controller.PC}" VerticalAlignment="Top" Width="150" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBlock x:Name="PCLabel" Text="PC" HorizontalAlignment="Right" Margin="0,162,634,0"  VerticalAlignment="Top" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBox x:Name="textBox_Copy19"   HorizontalAlignment="Right" Height="19" Margin="0,201,676,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Controller.IVR}" VerticalAlignment="Top" Width="150" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBlock x:Name="IVRLabel" Text="IVR" HorizontalAlignment="Right" Margin="0,202,634,0"  VerticalAlignment="Top" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBox x:Name="textBox_Copy20"   HorizontalAlignment="Right" Height="17" Margin="0,241,676,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="00000000000000" VerticalAlignment="Top" Width="150" FontSize="9"/>
+            <TextBlock x:Name="TLabel" Text="T" HorizontalAlignment="Right" Margin="0,240,634,0"  VerticalAlignment="Top" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBox x:Name="textBox_Copy21"   HorizontalAlignment="Right" Height="21" Margin="0,241,676,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Controller.T}" VerticalAlignment="Top" Width="150" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy22"   HorizontalAlignment="Right" Height="20" Margin="0,284,676,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Controller.SP}" VerticalAlignment="Top" Width="150" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy23"   HorizontalAlignment="Right" Height="20" Margin="0,320,676,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Controller.FLAG}" VerticalAlignment="Top" Width="150" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBlock x:Name="SPLabel" Text="SP" HorizontalAlignment="Right" Margin="0,285,634,0"  VerticalAlignment="Top" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="FLAGLabel" Text="FLAG" HorizontalAlignment="Right" Margin="0,321,634,0"  VerticalAlignment="Top" Height="16" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="label1_Copy23" Text="1" HorizontalAlignment="Right" Margin="0,376,633,0"  VerticalAlignment="Top" Height="18" Width="14" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="label1_Copy24" HorizontalAlignment="Right" Margin="0,413,650,0"  VerticalAlignment="Top" Height="18" Width="14" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"><Run Text="-"/><Run Text="1"/></TextBlock>
+            <TextBlock x:Name="label1_Copy25" HorizontalAlignment="Right" Margin="0,460,666,0"  VerticalAlignment="Top" Height="18" Width="14" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" Text="0"/>
+            <TextBlock x:Name="label1_Copy26" Text="Data out" HorizontalAlignment="Right" Margin="0,63,637,0"  VerticalAlignment="Top" Height="16" Width="56" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="label1_Copy27" HorizontalAlignment="Right" Margin="0,93,637,0"  VerticalAlignment="Top" Height="16" Width="56" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"><Run Text="Data "/><Run Text="in"/></TextBlock>
+            <TextBlock x:Name="label1_Copy28" Text="Address" HorizontalAlignment="Right" Margin="0,125,637,0"  VerticalAlignment="Top" Height="16" Width="56" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+            <TextBlock x:Name="label1_Copy29" HorizontalAlignment="Right" Margin="0,91,691,0"  VerticalAlignment="Top" Height="19" Width="45" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" Text="MEM"/>
+            <TextBlock x:Name="ALULabel" HorizontalAlignment="Right" Margin="0,400,787,0"  VerticalAlignment="Top" Height="20" Width="39" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" Text="NONE"/>
+            <Path Data="M324.55867,178.24533 L322.55832,162.91233" Fill="#FFFBB2B2" HorizontalAlignment="Left" Height="15.333" Margin="322.559,162.912,0,0" Stretch="Fill" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="2"/>
+            <TextBox x:Name="textBox_Copy24"   HorizontalAlignment="Right" Height="18" Margin="0,556,712,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Controller.RBUS}" VerticalAlignment="Top" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy25"   HorizontalAlignment="Right" Height="18" Margin="0,554,196,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Controller.DBUS}" VerticalAlignment="Top" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBox x:Name="textBox_Copy27"   HorizontalAlignment="Right" Height="18" Margin="0,555,459,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="{Binding Controller.SBUS}" VerticalAlignment="Top" Width="185" TextAlignment="Right" TextOptions.TextFormattingMode="Display" IsReadOnly="True"/>
+            <TextBlock x:Name="PCLabel_Copy" HorizontalAlignment="Right" Margin="0,555,901,0"  VerticalAlignment="Top" Height="20" Width="37" Background="#FF7480AA" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"><Run Text="RBUS"/><LineBreak/><Run/></TextBlock>
+
+            <TextBlock x:Name="PCLabel_Copy1" HorizontalAlignment="Right" Margin="0,554,650,16" Width="37" Background="#FF7480AA" Height="20" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"><Run Text="SBUS"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="PCLabel_Copy2" HorizontalAlignment="Right" Margin="0,553,388,17" Width="37" Background="#FF7480AA" Height="20" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"><Run Text="DBUS"/><LineBreak/><Run/></TextBlock>
+            <TextBox x:Name="SBUSTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Controller.CurrentMicroInstruction.SBUSSourceString}" VerticalAlignment="Top" Width="72" Margin="100,0,0,0" IsReadOnly="True"/>
+            <TextBox x:Name="DBUSSTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Controller.CurrentMicroInstruction.DBUSSourceString}" VerticalAlignment="Top" Width="72" Margin="172,0,0,0" IsReadOnly="True"/>
+            <TextBox x:Name="ALUTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Controller.CurrentMicroInstruction.ALUOperationString}" VerticalAlignment="Top" Width="72" Margin="242,0,0,0" IsReadOnly="True"/>
+            <TextBox x:Name="RBUSTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Controller.CurrentMicroInstruction.RBUSDestinationString}" VerticalAlignment="Top" Width="72" Margin="313,0,0,0" IsReadOnly="True"/>
+            <TextBox x:Name="OtherOperationTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Controller.CurrentMicroInstruction.OtherOperationsString}" VerticalAlignment="Top" Width="72" Margin="383,0,0,0" IsReadOnly="True"/>
+            <TextBox x:Name="MemoryTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Controller.CurrentMicroInstruction.MemoryOperationsString}" VerticalAlignment="Top" Width="72" Margin="454,0,0,0" IsReadOnly="True"/>
+            <TextBox x:Name="JumpTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Controller.CurrentMicroInstruction.RamificationConditionString}" VerticalAlignment="Top" Width="325" Margin="525,0,0,0" IsReadOnly="True"/>
+            <Button x:Name="StepButton" Content="Step" HorizontalAlignment="Left" Margin="0,3,0,0" VerticalAlignment="Top" Width="39" Click="StepButton_Click" />
+            <Button x:Name="RunBUtton" Content="Run" HorizontalAlignment="Left" Margin="53,3,0,0" VerticalAlignment="Top" Width="39" Click="RunBUtton_Click" />
+            <TextBox x:Name="Index" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Controller.CurrentIndex}" VerticalAlignment="Top" Width="45" Margin="911,3,0,0" IsReadOnly="True"/>
+
+
+        </Grid>
+        <Menu DockPanel.Dock="Top" x:Name="MenuBar" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="956" Grid.ColumnSpan="2">
+            <MenuItem Header="_File">
+                <MenuItem Name="AsmLoadMenuItem" Header="Incarca ASM"  Click="AsmLoadMenuItem_OnClick"/>
+                <MenuItem Name="MicroCodeLoadMenuItem" Header="Incarca Microcod" Click="MicroCodeLoadMenuItem_OnClick" />
+                <MenuItem Name="ExistMenuItem" Header="Exit" Click="ExistMenuItem_OnClick" />
+            </MenuItem>
+            <MenuItem Header="_Ferestre">
+                <MenuItem Name="ShowFilesMenuItem" Header="Continut fisiere" Click="ShowFilesMenuItem_OnClick"/>
+                <MenuItem Name="ShowMicroCodeMenuItem" Header="Microcod" Click="ShowMicroCodeMenuItem_OnClick"/>
+                <MenuItem Name="ShowMemeoryMenuItem" Header="Memorie Principala" Click="ShowMemeoryMenuItem_OnClick"/>
+                <MenuItem Name="ShowMicroCodeMemoryMenuItem" Header="Memorie MicroProgram" Click="ShowMicroCodeMemoryMenuItem_OnClick"/>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>

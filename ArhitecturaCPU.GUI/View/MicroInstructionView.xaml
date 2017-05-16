@@ -1,0 +1,32 @@
+﻿<Window x:Class="ArhitecturaCPU.GUI.View.MicroInstructionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArhitecturaCPU.GUI.View"
+        mc:Ignorable="d"
+        Title="MicroInstructionView" Height="380.737" Width="469.972" DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid Margin="0,0,2,0">
+        <DataGrid x:Name="DataGrid" ItemsSource="{Binding Path=Controller.MicroInstructionTuples}" SelectedIndex="{Binding Controller.CurrentIndex}" AutoGenerateColumns="False"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <DataGrid.Columns>
+                <DataGridTextColumn  x:Name="TemplateColumnAddress1" Header="Label" Binding="{Binding Path=Item1}" />
+                <DataGridTextColumn  x:Name="TemplateColumnAddress2" Header="Address" Binding="{Binding Path=Item2}"/>
+                <DataGridTextColumn  x:Name="TemplateColumnAddress3" Header="MicroInstruction" Binding="{Binding Path=Item3}"/>
+            </DataGrid.Columns>
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True" >
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Foreground" Value="Black" />
+                        </Trigger>
+                    </Style.Triggers>
+                    <Style.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
+                    </Style.Resources>
+                </Style>
+            </DataGrid.ItemContainerStyle>
+        </DataGrid>
+    </Grid>
+</Window>

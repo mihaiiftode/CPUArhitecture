@@ -1,0 +1,53 @@
+﻿<Window x:Class="ArhitecturaCPU.GUI.View.FileContentView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArhitecturaCPU.GUI.View"
+        mc:Ignorable="d"
+        Title="FileContentView" Height="294.28" Width="450.636" ResizeMode="NoResize"  DataContext="{Binding RelativeSource={RelativeSource Self}}" >
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="221*"/>
+            <ColumnDefinition Width="222*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView x:Name="listView"  HorizontalAlignment="Left" SelectionMode="Single" SelectedValue="{Binding Controller.SelectedAsmValue}" ItemsSource="{Binding Controller.AsmFileContentList, Mode=OneWay}" Height="236" VerticalAlignment="Top" Width="221" Margin="0,27,0,0">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True" >
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Foreground" Value="Black" />
+                        </Trigger>
+                    </Style.Triggers>
+                    <Style.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
+                    </Style.Resources>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListView>
+        <ListView x:Name="listView_Copy"  HorizontalAlignment="Left" SelectionMode="Extended" SelectedIndex="{Binding Controller.SelectedBinaryIndex}" ItemsSource="{Binding Controller.BinaryFileContentList, Mode=OneWay}" Height="236" VerticalAlignment="Top" Width="221" Grid.Column="1" Margin="0,27,0,0">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True" >
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Foreground" Value="Black" />
+                        </Trigger>
+                    </Style.Triggers>
+                    <Style.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
+                    </Style.Resources>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListView>
+        <Label x:Name="label" Content="Continut fisier ASM" HorizontalAlignment="Left" Margin="51,1,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Continut Binar" HorizontalAlignment="Left" Margin="55,1,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+
+    </Grid>
+</Window>
